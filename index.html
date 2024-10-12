@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тесты для 4, 5, 6 классов</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <h1>Тесты по предметам для 4, 5, 6 классов</h1>
+    
+    <!-- Главное меню -->
+    <div id="main-menu">
+        <div class="class-section">
+            <h2>Выберите класс</h2>
+            <ul>
+                <li><button onclick="selectClass(4)">4 класс</button></li>
+                <li><button onclick="selectClass(5)">5 класс</button></li>
+                <li><button onclick="selectClass(6)">6 класс</button></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Меню предметов -->
+    <div id="subject-menu" style="display:none;">
+        <h2 id="class-title"></h2>
+        <ul>
+            <li><button onclick="startTest('russian')">Русский язык</button></li>
+            <li><button onclick="startTest('math')">Математика</button></li>
+            <li><button onclick="startTest('english')">Английский язык</button></li>
+            <li><button onclick="startTest('nature')">Природа</button></li>
+            <li><button onclick="startTest('geo')">Азербайджанский язык</button></li>
+        </ul>
+        <button onclick="backToMainMenu()">Главное меню</button>
+    </div>
+
+    <!-- Контейнер для теста -->
+    <div id="test-container" style="display:none;">
+        <h2 id="test-title"></h2>
+        <div id="questions"></div>
+        <button id="submit-test" onclick="submitTest()">Отправить тест</button>
+        <button id="back-to-menu" onclick="backToSubjects()">Назад к предметам</button>
+    </div>
+
+    <!-- Результаты -->
+    <div id="result" style="display:none;">
+        <h2>Ваш результат:</h2>
+        <p id="result-text"></p>
+        <button onclick="backToMainMenu()">Главное меню</button>
+    </div>
+
+    <!-- Кнопка Инстаграм -->
+    <div id="instagram-button">
+        <a href="https://www.instagram.com/bilim_az?igsh=MWlrNGp2Yml1bmYxdw==" target="_blank">Инстаграм</a>
+    </div>
+</body>
+</html>
+
